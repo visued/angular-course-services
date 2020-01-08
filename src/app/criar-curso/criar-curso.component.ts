@@ -4,7 +4,8 @@ import { CursosServices } from '../cursos/cursos.service';
 @Component({
   selector: 'app-criar-curso',
   templateUrl: './criar-curso.component.html',
-  styleUrls: ['./criar-curso.component.css']
+  styleUrls: ['./criar-curso.component.css'],
+  providers: [CursosServices],
 })
 export class CriarCursoComponent implements OnInit {
 
@@ -19,5 +20,4 @@ export class CriarCursoComponent implements OnInit {
   onAddCurso(curso: string) {
     this._cursosService.addCurso(curso);
   }
-
 }
